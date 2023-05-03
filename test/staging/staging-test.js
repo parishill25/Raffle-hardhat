@@ -46,11 +46,12 @@ developmentChains.includes(network.name)
                               console.log(error)
                               reject(error)
                           }
-                          // Entering the Lottery
+                         
+                      })
+                       // Entering the Lottery
                           const txResponse=await raffle.enterRaffle({value:raffleEntranceFee})
                           const txReceipt= await txResponse.wait(1)
                         const winnerStartingBalance = await accounts[0].getBalance()
-                      })
                   })
               })
           })
